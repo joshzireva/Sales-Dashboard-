@@ -1,5 +1,5 @@
 
-# Sales Dashboard
+# Sales Dashboard by Joshua Zireva
 
 A report on sales of cookies sold in united states of America over a period of three years for the years ranging from year 2020 to 2022.
 

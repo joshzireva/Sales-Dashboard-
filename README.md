@@ -1,7 +1,7 @@
 
 # Sales Dashboard by Joshua Zireva
-
-A report on sales of cookies sold in united states of America over a period of three years for the years ranging from year 2020 to 2022.
+### Overview 
+This sales dashboard aims to provide insights into the sales performance of a cookie company in United States. By analyzing various aspects of sales data, we seek to identify trends, make data driven recommendations and gain deeper understanding of company's performance. This dashboard is for a period of three years for the years ranging from year 2020 to 2022.
 
 ### Data Source
 Sales data: The primary dataset used for this project is the "Sales_Data.csv" file containing details of each sale made by the company.
@@ -22,7 +22,13 @@ What are the sales peak periods?
 What sales lavel achieved in he same period last year?
 
 ```DAX
-Calender_Table = CALENDAR(Date(2020,01,01),Date(2022,12,31))
+Date = ADDCOLUMNS(
+    CALENDARAUTO(),
+    "Year", YEAR([DATE]),
+    "Month", FORMAT([Date], "mmm"),
+    "Month Number", Month([Date]),
+     "Quoter", FORMAT([Date],"\QQ")
+)
 ```
 ### Recommendations
 

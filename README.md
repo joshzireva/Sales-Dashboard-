@@ -13,22 +13,34 @@ Sales data: The primary dataset used for this project is the "Sales_Data.csv" fi
 
 ### Data Cleaning and preparation 
 Initially the following steps were taken:
-Data loading and inspection
-Remove unnecessary column.
-Data cleaning and formatting 
+- Data loading and inspection.
+- Removing unnecessary column.
+- Data cleaning and formatting. 
 ### Exploratory Sales Analysis
-What is the overal sales trend?
-What are the sales peak periods?
-What sales lavel achieved in he same period last year?
+- What is the overal sales trend?
+- What are the sales peak periods?
+- What sales lavel achieved in he same period last year?
 
+
+### Data Analysis 
+Create a date table
 ```DAX
 Date = ADDCOLUMNS(
     CALENDARAUTO(),
     "Year", YEAR([DATE]),
     "Month", FORMAT([Date], "mmm"),
     "Month Number", Month([Date]),
-     "Quoter", FORMAT([Date],"\QQ")
+     "Quarter", FORMAT([Date],"\QQ")
 )
 ```
+Some measures:
+``` DAX
+Revenue Last Year = 
+CALCULATE(
+    [Total_Revenue],
+    SAMEPERIODLASTYEAR('Date'[Date])
+)
+```
+
 ### Recommendations
 

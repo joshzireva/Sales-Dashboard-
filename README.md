@@ -69,3 +69,8 @@ Massive sales campaigns are needed in Utah and New York so as to improve sales.
 
 ### Recommendations
 
+Based on the analysis, the following is highly recommended
+
+- Focus on expanding and promoting sales in mentioned states
+  
+- Invest in marketing and promotions during peak sales seasons to maximise revenue.
